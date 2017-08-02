@@ -1,0 +1,43 @@
+.gridpics{ width: 100%; margin: 0; padding: 0;}
+.gridpics img{
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 2px;
+    padding: 0;
+    float: left;
+    border: none;
+}
+.gridpics .clear{
+    clear: both;
+    margin: 0;
+    padding: 0;
+}
+.gridpics:after, .gridpics-pic:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+.gridpics-pic .caption{
+    display: block;
+    padding: 5px;
+    margin: 0;
+}
+.gridpics-pic.caption-left .caption, .gridpics-pic.caption-left img{ float:left }
+.gridpics-pic.caption-right .caption, .gridpics-pic.caption-right img{ float: right; }
+.gridpics-pic.caption-inner-top, .gridpics-pic.caption-inner-bottom{ position: relative; }
+.gridpics-pic.caption-inner-top .caption, .gridpics-pic.caption-inner-bottom .caption{
+    position: absolute;
+    background: rgba(0,0,0,.5);
+    color: #fff;
+    width: 100%;
+    left: 1px;
+}
+.gridpics-pic.caption-inner-top .caption{ top: 1px; }
+.gridpics-pic.caption-inner-bottom .caption{ bottom: 1px; }
+
+.gridpics, .gridpics-pic{ display: inline-block; }
+html[xmlns] .gridpics, html[xmlns] .gridpics-pic{ display: block;}
+* html .gridpics, * html .gridpics-pic { height: 1%; }
